@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - {{ user.name }}{% endblock %}
+
+{% block content %}
+<h2>👋 Welcome, {{ user.name }}!</h2>
+
+<div class="user-info">
+    <h3 style="margin-bottom: 1rem; color: #667eea;">📋 Your Profile Information</h3>
+    
+    <p><strong>👤 Full Name:</strong> {{ user.name }}</p>
+    <p><strong>🔑 Username:</strong> {{ user.username }}</p>
+    <p><strong>🎓 Roll Number:</strong> {{ user.roll_no }}</p>
+    <p><strong>🏢 Department:</strong> {{ user.department }}</p>
+    <p><strong>🎂 Date of Birth:</strong> {{ user.dob }}</p>
+    <p><strong>📞 Phone:</strong> {{ user.phone }}</p>
+    <p><strong>📧 Email:</strong> {{ user.email }}</p>
+</div>
+
+<div style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.9rem; color: #155724; text-align: center;">
+    <strong>✅ You are successfully logged in!</strong>
+</div>
+
+<a href="{{ url_for('logout') }}" class="btn" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+    🚪 Logout
+</a>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Face Recognition System{% endblock %}
+
+{% block content %}
+<h2>👤 Login</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+
+    <button type="submit" class="btn">Login</button>
+</form>
+
+<div class="link-group">
+    <p>Don't have an account? <a href="{{ url_for('register') }}" class="link">Register here</a></p>
+    <p>Or try <a href="{{ url_for('face_login') }}" class="link">Face Recognition Login</a></p>
+    <p><a href="{{ url_for('main') }}" class="link">← Back to Home</a></p>
+</div>
+{% endblock %}

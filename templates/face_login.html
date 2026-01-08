@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Face Login - Face Recognition System{% endblock %}
+
+{% block content %}
+<h2>📸 Face Recognition Login</h2>
+
+<div style="text-align: center; margin: 2rem 0;">
+    <div style="font-size: 5rem; color: #667eea;">
+        📷
+    </div>
+    <p style="color: #666; margin-top: 1rem;">
+        Position your face in front of the camera and click the button below
+    </p>
+</div>
+
+<form method="post">
+    <button type="submit" class="btn">
+        🔍 Scan Face & Login
+    </button>
+</form>
+
+<div class="link-group">
+    <p>Prefer password login? <a href="{{ url_for('login') }}" class="link">Login with password</a></p>
+    <p>Don't have an account? <a href="{{ url_for('register') }}" class="link">Register here</a></p>
+    <p><a href="{{ url_for('main') }}" class="link">← Back to Home</a></p>
+</div>
+
+<div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; margin-top: 1.5rem; font-size: 0.9rem; color: #1565c0;">
+    <strong>💡 Tip:</strong> Make sure you're in a well-lit area and looking directly at the camera for best results.
+</div>
+{% endblock %}

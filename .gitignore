@@ -1,0 +1,12 @@
+__pycache__/
+dataSet
+config.py
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

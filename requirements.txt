@@ -1,0 +1,8 @@
+flask
+flask_sqlalchemy
+mysqlclient
+opencv-python
+mediapipe
+deepface
+numpy
+werkzeug

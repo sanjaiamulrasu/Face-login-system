@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Face Recognition Login System{% endblock %}
+
+{% block content %}
+<h1>🔐 Face Recognition Login System</h1>
+<p style="text-align: center; color: #666; margin-bottom: 2rem;">
+    Secure authentication using facial recognition technology
+</p>
+
+<div class="home-links">
+    <a href="{{ url_for('login') }}" class="home-link">
+        👤 Login with Password
+    </a>
+    <a href="{{ url_for('face_login') }}" class="home-link">
+        📸 Login with Face Recognition
+    </a>
+    <a href="{{ url_for('register') }}" class="home-link">
+        📝 Register New Account
+    </a>
+</div>
+{% endblock %}
